@@ -4,7 +4,7 @@
 #
 Name     : setuptools_scm
 Version  : 1.11.0
-Release  : 18
+Release  : 19
 URL      : https://pypi.python.org/packages/source/s/setuptools_scm/setuptools_scm-1.11.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/s/setuptools_scm/setuptools_scm-1.11.0.tar.gz
 Summary  : the blessed package to manage your versions by scm tags
