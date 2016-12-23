@@ -4,7 +4,7 @@
 #
 Name     : setuptools_scm
 Version  : 1.15.0
-Release  : 22
+Release  : 23
 URL      : http://pypi.debian.net/setuptools_scm/setuptools_scm-1.15.0.tar.gz
 Source0  : http://pypi.debian.net/setuptools_scm/setuptools_scm-1.15.0.tar.gz
 Summary  : the blessed package to manage your versions by scm tags
