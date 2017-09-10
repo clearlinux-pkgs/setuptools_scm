@@ -4,12 +4,13 @@
 #
 Name     : setuptools_scm
 Version  : 1.15.6
-Release  : 30
+Release  : 31
 URL      : https://pypi.debian.net/setuptools_scm/setuptools_scm-1.15.6.tar.gz
 Source0  : https://pypi.debian.net/setuptools_scm/setuptools_scm-1.15.6.tar.gz
 Summary  : the blessed package to manage your versions by scm tags
 Group    : Development/Tools
 License  : MIT
+Requires: setuptools_scm-legacypython
 Requires: setuptools_scm-python
 BuildRequires : pbr
 BuildRequires : pip
@@ -19,15 +20,20 @@ BuildRequires : setuptools
 BuildRequires : setuptools_scm
 
 %description
-setuptools_scm
 ===============
-:code:`setuptools_scm` handles managing your python package versions
-in scm metadata instead of declaring them as the version argument
-or in a scm managed file.
+
+%package legacypython
+Summary: legacypython components for the setuptools_scm package.
+Group: Default
+
+%description legacypython
+legacypython components for the setuptools_scm package.
+
 
 %package python
 Summary: python components for the setuptools_scm package.
 Group: Default
+Requires: setuptools_scm-legacypython
 
 %description python
 python components for the setuptools_scm package.
@@ -41,7 +47,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1497566731
+export SOURCE_DATE_EPOCH=1505071382
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -51,7 +57,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 py.test-2.7 || :
 %install
-export SOURCE_DATE_EPOCH=1497566731
+export SOURCE_DATE_EPOCH=1505071382
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -62,7 +68,10 @@ echo ----[ mark ]----
 %files
 %defattr(-,root,root,-)
 
-%files python
+%files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files python
+%defattr(-,root,root,-)
 /usr/lib/python3*/*
