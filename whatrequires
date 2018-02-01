@@ -43,6 +43,7 @@ WebOb
 WebTest
 Werkzeug
 Whoosh
+absl-py
 accountsservice
 acme
 adwaita-icon-theme
@@ -52,6 +53,7 @@ alsa-utils
 ansible
 apache-ant
 apache-hadoop
+apache-spark
 apache-zookeeper
 apipkg
 appdirs
@@ -99,6 +101,7 @@ chrome-gnome-shell
 click
 cloudpickle
 clr-boot-manager
+clr-init
 clutter
 clutter-gst
 clutter-gtk
@@ -170,9 +173,11 @@ garcon
 gcab
 gcr
 gcs-oauth2-boto-plugin
+gdal
 gdk-pixbuf
 gdm
 geany
+geany-plugins
 gedit
 gensim
 geoclue
@@ -232,6 +237,7 @@ html5lib
 httplib2
 httpretty
 hypothesis
+i2c-tools
 ibus
 icalendar
 icdiff
@@ -431,6 +437,7 @@ pygobject
 pyliblzma
 pylint
 pynacl
+pypandoc
 pyparsing
 pypy
 pyquery
