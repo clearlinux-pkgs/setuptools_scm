@@ -4,13 +4,12 @@
 #
 Name     : setuptools_scm
 Version  : 1.15.7
-Release  : 38
+Release  : 39
 URL      : https://pypi.debian.net/setuptools_scm/setuptools_scm-1.15.7.tar.gz
 Source0  : https://pypi.debian.net/setuptools_scm/setuptools_scm-1.15.7.tar.gz
 Summary  : the blessed package to manage your versions by scm tags
 Group    : Development/Tools
 License  : MIT
-Requires: setuptools_scm-legacypython
 Requires: setuptools_scm-python3
 Requires: setuptools_scm-python
 BuildRequires : pbr
@@ -23,19 +22,9 @@ BuildRequires : setuptools_scm
 %description
 ===============
 
-%package legacypython
-Summary: legacypython components for the setuptools_scm package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the setuptools_scm package.
-
-
 %package python
 Summary: python components for the setuptools_scm package.
 Group: Default
-Requires: setuptools_scm-legacypython
 Requires: setuptools_scm-python3
 
 %description python
@@ -59,8 +48,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1517518747
-python2 setup.py build -b py2
+export SOURCE_DATE_EPOCH=1523307558
 python3 setup.py build -b py3
 
 %check
@@ -69,20 +57,14 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 py.test-2.7 || :
 %install
-export SOURCE_DATE_EPOCH=1517518747
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files python
 %defattr(-,root,root,-)
