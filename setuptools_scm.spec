@@ -14,7 +14,7 @@ Requires: setuptools_scm-python3
 Requires: setuptools_scm-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 BuildRequires : setuptools-legacypython
