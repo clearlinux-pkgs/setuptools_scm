@@ -6,6 +6,10 @@ backports.weakref
 borgbackup
 cheroot
 cmd2
+cotyledon
+deprecated-Whoosh
+deprecated-pluggy
+deprecated-py
 execnet
 hgtools
 jaraco.functools

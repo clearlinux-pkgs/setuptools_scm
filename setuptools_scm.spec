@@ -4,7 +4,7 @@
 #
 Name     : setuptools_scm
 Version  : 3.2.0
-Release  : 61
+Release  : 62
 URL      : https://files.pythonhosted.org/packages/54/85/514ba3ca2a022bddd68819f187ae826986051d130ec5b972076e4f58a9f3/setuptools_scm-3.2.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/54/85/514ba3ca2a022bddd68819f187ae826986051d130ec5b972076e4f58a9f3/setuptools_scm-3.2.0.tar.gz
 Summary  : the blessed package to manage your versions by scm tags
@@ -13,7 +13,6 @@ License  : MIT
 Requires: setuptools_scm-license = %{version}-%{release}
 Requires: setuptools_scm-python = %{version}-%{release}
 Requires: setuptools_scm-python3 = %{version}-%{release}
-BuildRequires : buildreq-distutils23
 BuildRequires : buildreq-distutils3
 BuildRequires : python3-dev
 BuildRequires : setuptools-legacypython
@@ -25,15 +24,6 @@ setuptools_scm
 ``setuptools_scm`` handles managing your Python package versions
 in SCM metadata instead of declaring them as the version argument
 or in a SCM managed file.
-
-%package legacypython
-Summary: legacypython components for the setuptools_scm package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the setuptools_scm package.
-
 
 %package license
 Summary: license components for the setuptools_scm package.
@@ -69,9 +59,9 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1547736763
-python2 setup.py build -b py2
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1554328219
+export MAKEFLAGS=%{?_smp_mflags}
+python3 setup.py build
 
 %check
 export http_proxy=http://127.0.0.1:9/
@@ -79,22 +69,17 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 py.test-2.7 || :
 %install
-export SOURCE_DATE_EPOCH=1547736763
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/setuptools_scm
 cp LICENSE %{buildroot}/usr/share/package-licenses/setuptools_scm/LICENSE
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files license
 %defattr(0644,root,root,0755)
