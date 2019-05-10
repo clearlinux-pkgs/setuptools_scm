@@ -1,5 +1,5 @@
 PKG_NAME := setuptools_scm
-URL = https://files.pythonhosted.org/packages/31/c4/18481dd3d0ca210d78c265bac3352a37b491fa19346af19ebb7562d0de15/setuptools_scm-3.3.0.tar.gz
+URL = https://files.pythonhosted.org/packages/90/5d/a822911555aad367f24c3fd3019619b2906fc6aa52cc1784b8902d880c20/setuptools_scm-3.3.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
