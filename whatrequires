@@ -6,15 +6,13 @@ backports.weakref
 borgbackup
 cmd2
 cotyledon
-deprecated-Whoosh
-deprecated-pluggy
-deprecated-py
-deprecated-setuptools_scm
 execnet
 hgtools
+importlib_metadata
 jaraco.functools
 jupyter-notebook-gist
 khal
+mvn-arrow
 pluggy
 portend
 py
@@ -27,4 +25,5 @@ python-dateutil
 setuptools_scm
 setuptools_scm_git_archive
 tempora
+tenacity
 tox
