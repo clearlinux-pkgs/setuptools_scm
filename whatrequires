@@ -22,7 +22,6 @@ pytest-repeat
 pytest-runner
 pytest-xdist
 python-dateutil
-setuptools_scm
 setuptools_scm_git_archive
 tempora
 tenacity
