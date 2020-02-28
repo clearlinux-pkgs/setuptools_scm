@@ -26,3 +26,4 @@ setuptools_scm_git_archive
 tempora
 tenacity
 tox
+virtualenv
