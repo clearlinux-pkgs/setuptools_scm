@@ -7,7 +7,6 @@ borgbackup
 cmd2
 cotyledon
 execnet
-hgtools
 importlib_metadata
 jaraco.functools
 jupyter-notebook-gist
