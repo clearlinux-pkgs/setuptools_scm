@@ -11,7 +11,6 @@ importlib_metadata
 jaraco.functools
 jupyter-notebook-gist
 khal
-mvn-arrow
 pluggy
 portend
 py
