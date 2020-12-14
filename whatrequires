@@ -5,9 +5,9 @@ apipkg
 backports.weakref
 borgbackup
 cmd2
-cotyledon
 execnet
 importlib_metadata
+iniconfig
 jaraco.functools
 jupyter-notebook-gist
 khal
@@ -22,6 +22,8 @@ pytest-xdist
 python-dateutil
 setuptools_scm_git_archive
 tempora
-tenacity
+tldextract
 tox
+typeguard
+ujson
 virtualenv
