@@ -1,6 +1,7 @@
 # This file contains recursive sources that require this package
 CherryPy
 Whoosh
+anyio
 apipkg
 backports.weakref
 borgbackup
