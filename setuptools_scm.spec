@@ -4,7 +4,7 @@
 #
 Name     : setuptools_scm
 Version  : 6.0.1
-Release  : 95
+Release  : 96
 URL      : https://files.pythonhosted.org/packages/57/38/930b1241372a9f266a7df2b184fb9d4f497c2cef2e016b014f82f541fe7c/setuptools_scm-6.0.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/57/38/930b1241372a9f266a7df2b184fb9d4f497c2cef2e016b014f82f541fe7c/setuptools_scm-6.0.1.tar.gz
 Summary  : the blessed package to manage your versions by scm tags
