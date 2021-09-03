@@ -3,6 +3,7 @@ CherryPy
 Whoosh
 anyio
 apipkg
+backports.entry_points_selectable
 backports.weakref
 borgbackup
 cmd2
@@ -12,6 +13,7 @@ iniconfig
 jaraco.functools
 jupyter-notebook-gist
 khal
+platformdirs
 pluggy
 portend
 py
@@ -28,3 +30,4 @@ tox
 typeguard
 ujson
 virtualenv
+zipp
