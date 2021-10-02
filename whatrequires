@@ -13,12 +13,15 @@ iniconfig
 jaraco.functools
 jupyter-notebook-gist
 khal
+lazy-object-proxy
+libcst
 platformdirs
 pluggy
 portend
 py
 pytest
 pytest-forked
+pytest-mock
 pytest-repeat
 pytest-runner
 pytest-xdist
@@ -28,6 +31,5 @@ tempora
 tldextract
 tox
 typeguard
-ujson
 virtualenv
 zipp

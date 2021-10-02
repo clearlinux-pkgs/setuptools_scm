@@ -4,7 +4,7 @@
 #
 Name     : setuptools_scm
 Version  : 6.3.2
-Release  : 99
+Release  : 100
 URL      : https://files.pythonhosted.org/packages/4b/0d/ecb9595fae02467edba5023eb8a23c688d2b438a6a8d1a9e2b8649faf23d/setuptools_scm-6.3.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/4b/0d/ecb9595fae02467edba5023eb8a23c688d2b438a6a8d1a9e2b8649faf23d/setuptools_scm-6.3.2.tar.gz
 Summary  : the blessed package to manage your versions by scm tags
@@ -17,9 +17,14 @@ Requires: packaging
 Requires: setuptools
 Requires: tomli
 BuildRequires : buildreq-distutils3
+BuildRequires : git
+BuildRequires : mercurial
 BuildRequires : packaging
+BuildRequires : pip
+BuildRequires : pytest
 BuildRequires : setuptools
 BuildRequires : tomli
+BuildRequires : virtualenv
 
 %description
 setuptools_scm
@@ -67,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1631473894
+export SOURCE_DATE_EPOCH=1633197955
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -83,7 +88,7 @@ python3 setup.py build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-py.test-2.7 || :
+pytest --verbose || :
 %install
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
